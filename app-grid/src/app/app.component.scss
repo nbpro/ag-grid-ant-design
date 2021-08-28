@@ -1,0 +1,100 @@
+::ng-deep {
+  .gs-grid-wrapper {
+    font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    .ag-header .ag-header-container .ag-header-row {
+      height: 10rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: rgba(0,0,0,.85);
+      &:first-child {
+        .ag-header-cell {
+          letter-spacing: 1px;
+          font-size: 16px;
+          &:hover {
+            border: 1px solid #f0f0f0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+          }
+        }
+      }
+    }
+
+    .ag-header-cell {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      border: 1px solid #f0f0f0;
+      &:hover {
+        background: none !important;
+      }
+    }
+
+    .ag-root-wrapper .gs-grid-filter {
+      height: 3rem;
+      transform: translateY(.2rem);
+      font-family: -apple-system, BlinkMacSystemFont,
+      "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans",
+      "Droid Sans", "Helvetica Neue", sans-serif;
+      font-size: 16px;
+      font-weight: normal;
+      .mat-icon-button {
+        width: 2.4rem;
+        height: 2.4rem;
+        line-height: 2.4rem;
+        margin-right: .2rem;
+      }
+
+      .gs-grid-filter__left {
+        padding-right: 0;
+      }
+    }
+
+    .ag-cell {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      border: 1px solid #f0f0f0;
+      a {
+        color: #2661ad;
+
+        i.material-icons {
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    .ag-cell-range-selected-1:not(.ag-cell-focus) {
+      background-color: transparent;
+    }
+
+    .ag-cell.ag-cell-range-selected:not(.ag-cell-range-single-cell).ag-cell-range-left {
+      border: transparent;
+    }
+    .ag-root-wrapper-body > * {
+      border: 1px solid #f0f0f0;
+      font-family: -apple-system, BlinkMacSystemFont,
+      "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans",
+      "Droid Sans", "Helvetica Neue", sans-serif;
+      font-size: 16px;
+    }
+    .ag-filter > * {
+      border: 1px solid #f0f0f0;
+      font-family: -apple-system, BlinkMacSystemFont,
+      "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans",
+      "Droid Sans", "Helvetica Neue", sans-serif;
+      font-size: 16px;
+    }
+  }
+}
+
+.app-container{
+  position: relative;
+  left: 10rem;
+  top:2rem;
+}
