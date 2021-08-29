@@ -1,11 +1,40 @@
 
 <div class="app-container">
   <ag-grid-angular
-    style="width: 500px; height: 500px;"
-    class="ag-theme-material gs-grid-wrapper"
-    [rowData]="rowData"
+    class="ag-theme-material custom-grid-wrapper"
+    style="width: 80%; height: 75%"
+    [gridOptions]="gridOptions"
     [columnDefs]="columnDefs"
+    [rowData]="rowData"
+    [pagination]="true"
+    [paginationPageSize]=10
+    enableColResize
+    enableSorting
+    enableFilter
+    groupHeaders
+    toolPanelSuppressGroups
+    toolPanelSuppressValues
     rowSelection="multiple"
+    (modelUpdated)="onModelUpdated()"
+    (cellClicked)="onCellClicked($event)"
+    (cellDoubleClicked)="onCellDoubleClicked($event)"
+    (cellContextMenu)="onCellContextMenu($event)"
+    (cellValueChanged)="onCellValueChanged($event)"
+    (cellFocused)="onCellFocused($event)"
+    (rowSelected)="onRowSelected($event)"
+    (selectionChanged)="onSelectionChanged()"
+    (filterModified)="onFilterModified()"
+    (virtualRowRemoved)="onVirtualRowRemoved($event)"
+    (rowClicked)="onRowClicked($event)"
+    (gridReady)="onReady($event)"
+    (columnEverythingChanged)="onColumnEvent($event)"
+    (columnRowGroupChanged)="onColumnEvent($event)"
+    (columnValueChanged)="onColumnEvent($event)"
+    (columnMoved)="onColumnEvent($event)"
+    (columnVisible)="onColumnEvent($event)"
+    (columnGroupOpened)="onColumnEvent($event)"
+    (columnResized)="onColumnEvent($event)"
+  >
   >
   </ag-grid-angular>
 </div>

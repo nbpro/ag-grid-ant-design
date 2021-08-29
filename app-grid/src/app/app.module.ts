@@ -11,12 +11,38 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {AgGridModule} from "ag-grid-angular";
+import {
+  DeleteOutline,
+  FilterOutline,
+  QrcodeOutline,
+  PrinterOutline,
+  MoreOutline,
+  UploadOutline,
+  PrinterFill,
+  DownloadOutline
+} from '@ant-design/icons-angular/icons';
+import {NzIconModule} from "ng-zorro-antd/icon";
+import {NzButtonModule} from "ng-zorro-antd/button";
+import {ActionRendererComponent} from "./renderers/action-renderer.component";
+import {NzTooltipBaseComponent, NzToolTipModule} from "ng-zorro-antd/tooltip";
 
 registerLocaleData(en);
 
+const icons = [
+  DeleteOutline,
+  FilterOutline,
+  QrcodeOutline,
+  PrinterOutline,
+  MoreOutline,
+  UploadOutline,
+  PrinterFill,
+  DownloadOutline
+];
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ActionRendererComponent
   ],
   imports: [
     BrowserModule,
@@ -24,9 +50,13 @@ registerLocaleData(en);
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    AgGridModule.withComponents([])
+    AgGridModule.withComponents([]),
+    NzIconModule.forChild(icons),
+    NzButtonModule,
+    NzToolTipModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
+  entryComponents: [ActionRendererComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
